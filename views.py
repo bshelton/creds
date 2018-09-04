@@ -20,7 +20,7 @@ def create_key(username):
 @app.route('/get/user/<username>', methods=['GET'])
 def get_user(username):
     user_id = Users.query.filter(Users.username == username).first()
-    return str(user_id.id)
+    return str(user_id.username)
 
 
 @app.route('/get/user/password/<username>', methods=['GET'])
